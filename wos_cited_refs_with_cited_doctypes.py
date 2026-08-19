@@ -28,7 +28,7 @@ apikey = os.getenv('EXPANDED_APIKEY')
 
 
 params = {'databaseId': 'WOS',
-          'usrQuery': 'AI=(MZS-0527-2025)',
+          'usrQuery': 'AU=(Stanwood)',
           'firstRecord': 1,
           'count': 50,
           'optionView': 'SR'
