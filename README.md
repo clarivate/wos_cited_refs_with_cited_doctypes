@@ -12,7 +12,7 @@ It is intended to be used as a **script within a package/repo** (not as a standa
 
 ## What’s included
 
-- `wos_cited_refs_with_cited_doctypes_batched.py` — top-level runner that:
+- `wos_cited_refs_with_cited_doctypes.py` — top-level runner that:
   - runs a WoS SR search (`optionView=SR`) to collect Source UIDs/UTs
   - calls the cited references endpoint for each Source UID
   - writes a CSV of Source UID → Cited Reference fields
@@ -55,7 +55,7 @@ EXPANDED_APIKEY=YOUR_WOS_EXPANDED_API_KEY
 Basic usage:
 
 ```bash
-python wos_cited_refs_with_cited_doctypes_batched.py -q "AU=Stanwood"
+python wos_cited_refs_with_cited_doctypes.py -q "AU=Stanwood"
 ```
 
 ### Options
@@ -72,7 +72,7 @@ python wos_cited_refs_with_cited_doctypes_batched.py -q "AU=Stanwood"
 Example:
 
 ```bash
-python wos_cited_refs_with_cited_doctypes_batched.py -q "TS=CRISPR" --include-zero-ref-uids
+python wos_cited_refs_with_cited_doctypes.py -q "TS=CRISPR" --include-zero-ref-uids
 ```
 
 ### Parameters section (in-script defaults)
@@ -197,6 +197,16 @@ Sheets include:
   - total cited references retrieved
   - number of source records with zero cited references
   - any cited-work variant merges applied through `JCR 2025.csv`
+
+## Example Output
+
+<p align="center">
+  <img src="CRCD_Example.jpg" alt="Cited Reference Details example" width="900">
+</p>
+
+<p align="center">
+  <em>Example of the Cited Reference Details worksheet with cited-reference document types.</em>
+</p>
 
 ## JCR mapping file (`JCR 2025.csv`)
 
